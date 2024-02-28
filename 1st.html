@@ -66,11 +66,25 @@
             } else if (type === 'Vegetable') {
                 vegBox.appendChild(item);
             }
-            
-            clearTimeout(timeout);
+
             setTimeout(() => {
                 mainList.appendChild(item);
             }, 5000);
+        }
+    });
+    fruitBox.addEventListener('click', function(event) {
+        if (event.target.classList.contains('item')) {
+            const item = event.target;
+            mainList.appendChild(item);
+            clearTimeout(timeout);
+        }
+    });
+
+    vegBox.addEventListener('click', function(event) {
+        if (event.target.classList.contains('item')) {
+            const item = event.target;
+            mainList.appendChild(item);
+            clearTimeout(timeout);
         }
     });
 </script>
