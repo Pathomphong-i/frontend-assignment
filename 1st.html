@@ -66,7 +66,8 @@
             } else if (type === 'Vegetable') {
                 vegBox.appendChild(item);
             }
-
+            
+            clearTimeout(timeout);
             setTimeout(() => {
                 mainList.appendChild(item);
             }, 5000);
